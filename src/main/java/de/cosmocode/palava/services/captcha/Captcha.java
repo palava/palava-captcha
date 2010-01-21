@@ -19,12 +19,14 @@
 
 package de.cosmocode.palava.services.captcha;
 
+import de.cosmocode.palava.core.service.Service;
+
 /**
  * A service for generating captchas.
  *
  * @author Willi Schoenborn
  */
-public interface Captcha {
+public interface Captcha extends Service {
 
     /**
      * Returns the byte data of the captcha with the given token.
