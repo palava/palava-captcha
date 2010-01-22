@@ -47,7 +47,7 @@ public class validate implements Job {
         Server server, Map<String, Object> caddy) throws Exception {
         
         final DataCall req = (DataCall) request;
-        final String userInput = req.getArguments().get("code");
+        final String userInput = req.getStringedArguments().get("code");
         final boolean result = captcha.validate(session.getSessionId(), userInput);
         
         response.setContent(new PhpContent(result));
