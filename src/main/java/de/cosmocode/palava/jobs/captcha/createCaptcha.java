@@ -24,13 +24,13 @@ import java.util.Map;
 
 import com.google.inject.Inject;
 
-import de.cosmocode.palava.Job;
-import de.cosmocode.palava.MimeType;
 import de.cosmocode.palava.core.call.Call;
 import de.cosmocode.palava.core.protocol.Response;
+import de.cosmocode.palava.core.protocol.content.MimeType;
 import de.cosmocode.palava.core.protocol.content.StreamContent;
 import de.cosmocode.palava.core.server.Server;
 import de.cosmocode.palava.core.session.HttpSession;
+import de.cosmocode.palava.legacy.Job;
 import de.cosmocode.palava.services.captcha.Captcha;
 
 /**
