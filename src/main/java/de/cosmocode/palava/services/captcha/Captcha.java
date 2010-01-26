@@ -19,7 +19,7 @@
 
 package de.cosmocode.palava.services.captcha;
 
-import de.cosmocode.palava.core.service.Service;
+import de.cosmocode.palava.core.Service;
 
 /**
  * A service for generating captchas.
