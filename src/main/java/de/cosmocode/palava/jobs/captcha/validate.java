@@ -23,13 +23,13 @@ import java.util.Map;
 
 import com.google.inject.Inject;
 
-import de.cosmocode.palava.core.bridge.call.Call;
-import de.cosmocode.palava.core.bridge.call.DataCall;
-import de.cosmocode.palava.core.bridge.command.Response;
-import de.cosmocode.palava.core.bridge.session.HttpSession;
-import de.cosmocode.palava.core.bridge.simple.content.PhpContent;
-import de.cosmocode.palava.legacy.Job;
-import de.cosmocode.palava.legacy.server.Server;
+import de.cosmocode.palava.bridge.Server;
+import de.cosmocode.palava.bridge.call.Call;
+import de.cosmocode.palava.bridge.call.DataCall;
+import de.cosmocode.palava.bridge.command.Job;
+import de.cosmocode.palava.bridge.command.Response;
+import de.cosmocode.palava.bridge.content.PhpContent;
+import de.cosmocode.palava.bridge.session.HttpSession;
 import de.cosmocode.palava.services.captcha.Captcha;
 
 /**
@@ -51,8 +51,6 @@ public class validate implements Job {
         final boolean result = captcha.validate(session.getSessionId(), userInput);
         
         response.setContent(new PhpContent(result));
-        
-
 
     }
 

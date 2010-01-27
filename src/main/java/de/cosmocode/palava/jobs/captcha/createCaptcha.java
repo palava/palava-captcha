@@ -1,6 +1,6 @@
 /**
  * palava - a java-php-bridge
- * Copyright (C) 2007  CosmoCode GmbH
+ * Copyright (C) 2007-2010  CosmoCode GmbH
  *
  * This program is free software; you can redistribute it and/or
  * modify it under the terms of the GNU General Public License
@@ -24,13 +24,13 @@ import java.util.Map;
 
 import com.google.inject.Inject;
 
-import de.cosmocode.palava.core.bridge.call.Call;
-import de.cosmocode.palava.core.bridge.command.Response;
-import de.cosmocode.palava.core.bridge.session.HttpSession;
-import de.cosmocode.palava.core.bridge.simple.content.MimeType;
-import de.cosmocode.palava.core.bridge.simple.content.StreamContent;
-import de.cosmocode.palava.legacy.Job;
-import de.cosmocode.palava.legacy.server.Server;
+import de.cosmocode.palava.bridge.MimeType;
+import de.cosmocode.palava.bridge.Server;
+import de.cosmocode.palava.bridge.call.Call;
+import de.cosmocode.palava.bridge.command.Job;
+import de.cosmocode.palava.bridge.command.Response;
+import de.cosmocode.palava.bridge.content.StreamContent;
+import de.cosmocode.palava.bridge.session.HttpSession;
 import de.cosmocode.palava.services.captcha.Captcha;
 
 /**
