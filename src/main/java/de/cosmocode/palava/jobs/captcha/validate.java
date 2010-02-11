@@ -26,13 +26,17 @@ import de.cosmocode.palava.bridge.call.Call;
 import de.cosmocode.palava.bridge.command.Command;
 import de.cosmocode.palava.bridge.command.CommandException;
 import de.cosmocode.palava.bridge.content.TextContent;
+import de.cosmocode.palava.captcha.Validate;
 import de.cosmocode.palava.services.captcha.Captcha;
 
 /**
  * Validates the current captcha against the user input.
  *
+ * @deprecated use {@link Validate} instead
+ *
  * @author Willi Schoenborn
  */
+@Deprecated
 public class validate implements Command {
 
     @Inject

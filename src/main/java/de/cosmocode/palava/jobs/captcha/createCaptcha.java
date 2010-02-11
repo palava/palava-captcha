@@ -31,14 +31,18 @@ import de.cosmocode.palava.bridge.command.Job;
 import de.cosmocode.palava.bridge.command.Response;
 import de.cosmocode.palava.bridge.content.StreamContent;
 import de.cosmocode.palava.bridge.session.HttpSession;
+import de.cosmocode.palava.captcha.Create;
 import de.cosmocode.palava.services.captcha.Captcha;
 
 /**
  * Creates a captcha image and returns the binary image data
  * to the browser.
+ * 
+ * @deprecated use {@link Create} instead
  *
  * @author Willi Schoenborn
  */
+@Deprecated
 public class createCaptcha implements Job {
 
     @Inject
