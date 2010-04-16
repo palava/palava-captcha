@@ -35,7 +35,6 @@ import de.cosmocode.palava.ipc.IpcSession;
 import de.cosmocode.palava.ipc.IpcCommand.Description;
 import de.cosmocode.palava.ipc.IpcCommand.Param;
 import de.cosmocode.palava.ipc.IpcCommand.Return;
-import de.cosmocode.palava.services.captcha.Captcha;
 
 /**
  * See below.
@@ -49,10 +48,10 @@ public final class Validate implements IpcCommand {
 
     private static final Logger LOG = LoggerFactory.getLogger(Validate.class);
 
-    private final Captcha captcha;
+    private final CaptchaService captcha;
     
     @Inject
-    public Validate(Captcha captcha) {
+    public Validate(CaptchaService captcha) {
         this.captcha = Preconditions.checkNotNull(captcha, "Captcha");
     }
 

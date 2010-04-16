@@ -17,16 +17,14 @@
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
  */
 
-package de.cosmocode.palava.services.captcha;
-
-import de.cosmocode.palava.core.Service;
+package de.cosmocode.palava.captcha;
 
 /**
  * A service for generating captchas.
  *
  * @author Willi Schoenborn
  */
-public interface Captcha extends Service {
+public interface CaptchaService {
 
     /**
      * Returns the byte data of the captcha with the given token.
@@ -34,15 +32,15 @@ public interface Captcha extends Service {
      * @param token the token
      * @return byte array of jpeg image data
      */
-    byte[] getJpegCapchta(String token);
+    byte[] getCaptcha(String token);
 
     /**
      * Checks for valid user inputs.
      * 
-     * @param sessionId the user's session id
+     * @param token the token
      * @param userInput the user's input
      * @return true if userInput was valid
      */
-    boolean validate(String sessionId, String userInput);
+    boolean validate(String token, String userInput);
 
 }

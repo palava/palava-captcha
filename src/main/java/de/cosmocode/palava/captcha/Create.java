@@ -35,7 +35,6 @@ import de.cosmocode.palava.ipc.IpcConnection;
 import de.cosmocode.palava.ipc.IpcSession;
 import de.cosmocode.palava.ipc.IpcCommand.Description;
 import de.cosmocode.palava.ipc.IpcCommand.Return;
-import de.cosmocode.palava.services.captcha.Captcha;
 
 /**
  * See below.
@@ -51,10 +50,10 @@ public final class Create implements IpcCommand {
 
     private static final Logger LOG = LoggerFactory.getLogger(Create.class);
 
-    private final Captcha captcha;
+    private final CaptchaService captcha;
     
     @Inject
-    public Create(Captcha captcha) {
+    public Create(CaptchaService captcha) {
         this.captcha = Preconditions.checkNotNull(captcha, "Captcha");
     }
     
@@ -65,7 +64,7 @@ public final class Create implements IpcCommand {
         final IpcSession session = connection.getSession();
         final String sessionId = session.getSessionId();
         
-        final byte[] binary = captcha.getJpegCapchta(sessionId);
+        final byte[] binary = captcha.getCaptcha(sessionId);
         LOG.trace("Created captcha challenge for {}", sessionId);
         final String base64 = Base64.encodeBase64String(binary);
         
