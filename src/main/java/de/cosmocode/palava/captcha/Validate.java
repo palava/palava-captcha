@@ -23,6 +23,7 @@ import org.slf4j.LoggerFactory;
 
 import com.google.common.base.Preconditions;
 import com.google.inject.Inject;
+import com.google.inject.Singleton;
 
 import de.cosmocode.palava.ipc.IpcCall;
 import de.cosmocode.palava.ipc.IpcCommand;
@@ -41,6 +42,7 @@ import de.cosmocode.palava.ipc.IpcCommand.Return;
 @Description("Checks a user input against a captcha challenge.")
 @Param(name = "code", description = "The user input")
 @Return(name = "valid", description = "true if user input was valid, false otherwise")
+@Singleton
 public final class Validate implements IpcCommand {
 
     private static final Logger LOG = LoggerFactory.getLogger(Validate.class);
