@@ -28,11 +28,11 @@ import com.google.inject.Singleton;
 
 import de.cosmocode.palava.ipc.IpcCall;
 import de.cosmocode.palava.ipc.IpcCommand;
+import de.cosmocode.palava.ipc.IpcCommand.Description;
+import de.cosmocode.palava.ipc.IpcCommand.Return;
 import de.cosmocode.palava.ipc.IpcCommandExecutionException;
 import de.cosmocode.palava.ipc.IpcConnection;
 import de.cosmocode.palava.ipc.IpcSession;
-import de.cosmocode.palava.ipc.IpcCommand.Description;
-import de.cosmocode.palava.ipc.IpcCommand.Return;
 
 /**
  * See below.
